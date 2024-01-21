@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{%static 'h3edition.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .b1 { 
+            display: flex; 
+            justify-content: center; /* Center the items horizontally */
+            align-items: center; /* Center the items vertically */
+            background-color: rgb(205, 253, 253);
+            padding: 10px;
+        }
+
+        .b1 > h1 {
+            margin-right: 20px;
+        }
+
+        .b1 > a { 
+            font-size: 1.2vw; 
+            text-decoration: none; 
+            padding: 8px 15px; 
+            border: 2px solid blue; 
+            margin: 0 10px; 
+            border-radius: 5px; 
+            color: #333; 
+            transition: background-color 0.3s ease; 
+        }
+
+        .b1 > a:hover {
+            background-color: #c0e4ff; 
+        }
+        footer {
+            background-color: #333;
+            color: rgb(202, 243, 255);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="b1">
+            <h1>Hi My name is mohammad safaie</h1>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'education' %}">Education</a>
+            <a href="{% url 'languages' %}">Languages</a>
+            <a href="{% url 'abilities' %}">Abilities</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </div>
+    </header>
+
+{% block content %}
+
+{% endblock %}
+<footer>
+    <p>Contact Information:</p>
+    <p>Email: example@example.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+    <p>Address: 123 Main Street, Cityville</p>
+</footer>
+</body>
+</html>
+

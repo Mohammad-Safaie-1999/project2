@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="text-align: center; margin-top: 30px;">
+    <h1 style="color: #4285f4; font-size: 2.5em;">Biography</h1>
+    <h2 style="font-size: 1.8em; color: #333; margin-top: 15px;">Born in Tehran, Iran (1999)</h2>
+    <img src="{% static 'images/tehran.jpg' %}" alt="Tehran"
+        style="height: 300px; width: 500px; border-radius: 15px; margin-top: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+    <h3>A Glimpse of Tehran</h3>
+    <p style="font-size: 1.2em; color: #555; margin-top: 10px;">Explore a vibrant snapshot of Tehran, my hometown.</p>
+</div>
+{% endblock %}
